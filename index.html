@@ -10,29 +10,80 @@
         h1{
             font-size:large;
         }
+        .angle{
+            display:flex;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-weight:500;
+            font-size:50px;
+            justify-content:center;
+
+        }
+        .ace{
+            border-style:hidden;
+            background-color: #4dbae1;
+            color:rgb(13, 13, 76);
+            border-radius:5px;
+        }
+        .slider {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 25px;
+  background: #d3d3d3;
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+}
+
+.slider:hover {
+  opacity: 1;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 25px;
+  height: 25px;
+  background: #0851bf;
+  cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+  width: 25px;
+  height: 25px;
+  background:#0851bf;
+  cursor: pointer;
+}
+.text{
+    font-size:20px;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    
+}
     </style>
 </head>
 <body>
-    <h1>Angle Calculator</h1>
-
-    <label for="accelerationXSlider">X-Axis Acceleration (m/s²)</label>
+    <div class="angle">
+    <div class="ace">Angle Calculator</div>
+</div>
+<div class="slidecontainer">
+    <label for="accelerationXSlider" class="text">X-Axis Acceleration (m/s²)</label>
     <br><br>
     <input type="range" min="0" max="100" step="0.1" value="0" class="slider" id="accelerationXSlider">
     <br><br>
-    <label for="accelerationYSlider">Y-Axis Acceleration (m/s²)</label>
+    <label for="accelerationYSlider" class="text">Y-Axis Acceleration (m/s²)</label>
     <br><br>
     <input type="range" min="0" max="100" step="0.1" value="0" class="slider" id="accelerationYSlider">
     <br><br>
-    <label for="accelerationZSlider">Z-Axis Acceleration (m/s²)</label>
+    <label for="accelerationZSlider" class="text">Z-Axis Acceleration (m/s²)</label>
     <br><br>
     <input type="range" min="0" max="100" step="0.1" value="0" class="slider" id="accelerationZSlider">
     <br><br>
-    <label for="distanceSlider">Distance to Target (km)</label>
+    <label for="distanceSlider" class="text">Distance to Target (km)</label>
     <br><br>
     <input type="range" min="0" max="100" step="0.1" value="0" class="slider" id="distanceSlider">
     
     <div id="result"></div>
-
+</div>
     <script src="script.js">
        
     </script>
